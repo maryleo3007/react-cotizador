@@ -3,13 +3,10 @@ import React, {Component} from 'react';
 class Formulario extends Component {
     //refs son para leer los valores de los campos de un formulario
     
-
     marcasRef = React.createRef();
     yearRef = React.createRef();
     planBasicRef =  React.createRef();
     planCompletoRef = React.createRef();
-
-    
 
     cotizarSeguro = (e) =>{
         e.preventDefault();
@@ -22,13 +19,12 @@ class Formulario extends Component {
             marca: this.marcasRef.current.value,
             year: this.yearRef.current.value,
             plan: plan
-
         }
         //enviarle al componente
         this.props.cotizarSeguro(infoAuto);
 
         //resetear formulario
-        e.currentTarget.reset();
+        // e.currentTarget.reset();
     }
     render(){
         return(
